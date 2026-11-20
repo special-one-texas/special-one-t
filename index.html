@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPECIAL ONE TEXAS BOT | الدخول الرسمي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #080808;
+            --card-dark: #131313;
+            --card-top: #1c1511;
+            --surface-soft: rgba(255, 255, 255, 0.03);
+            --orange-main: #ff5500;
+            --orange-light: #ff7a38;
+            --orange-deep: #d64000;
+            --green-live: #2ecc71;
+            --text-white: #ffffff;
+            --text-muted: #b3b3b3;
+            --text-dim: #7a7a7a;
+            --border-subtle: rgba(255, 85, 0, 0.25);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at 50% 8%, rgba(255, 85, 0, 0.18) 0%, rgba(8, 8, 8, 1) 60%), var(--bg-dark);
+            color: var(--text-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            background: linear-gradient(180deg, var(--card-top) 0%, var(--card-dark) 100%);
+            padding: 26px 22px 30px;
+            border-radius: 24px;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8), 0 0 28px rgba(255, 85, 0, 0.09);
+            border: 1px solid var(--border-subtle);
+            max-width: 430px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--orange-light), transparent);
+        }
+
+        /* شريط علوي يشبه واجهة المنصة */
+        .platform-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--surface-soft);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 14px;
+            padding: 10px 14px;
+            margin-bottom: 20px;
+        }
+
+        .texas-logo {
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--text-white);
+        }
+
+        .texas-logo span {
+            color: var(--orange-main);
+        }
+
+        .platform-tag {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--orange-light);
+            background: rgba(255, 85, 0, 0.14);
+            border: 1px solid rgba(255, 85, 0, 0.28);
+            padding: 3px 10px;
+            border-radius: 999px;
+        }
+
+        /* شعار البوت */
+        .bot-emblem {
+            width: 74px;
+            height: 74px;
+            border-radius: 22px;
+            background: linear-gradient(145deg, var(--orange-light), var(--orange-deep));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            box-shadow: 0 8px 24px rgba(255, 85, 0, 0.38);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .bot-emblem svg {
+            width: 38px;
+            height: 38px;
+            fill: #ffffff;
+        }
+
+        .bot-title {
+            font-size: 21px;
+            font-weight: 900;
+            letter-spacing: 0.8px;
+            color: var(--text-white);
+            margin-bottom: 8px;
+        }
+
+        .bot-title span {
+            color: var(--orange-light);
+        }
+
+        .badge {
+            background: rgba(255, 85, 0, 0.12);
+            color: var(--orange-light);
+            border: 1px solid rgba(255, 85, 0, 0.32);
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 12.5px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 14px;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--green-live);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--green-live);
+            animation: pulseDot 1.6s infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.35); opacity: 0.7; }
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-white);
+            line-height: 1.4;
+        }
+
+        p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        /* بطاقة وصول سريع بنمط المنصة */
+        .quick-access-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+
+        .access-item {
+            background: var(--surface-soft);
+            border: 1px solid rgba(255, 85, 0, 0.2);
+            border-radius: 12px;
+            padding: 9px 10px;
+            text-align: right;
+        }
+
+        .access-title {
+            display: block;
+            font-size: 12.5px;
+            font-weight: 800;
+            color: var(--orange-light);
+        }
+
+        .access-sub {
+            display: block;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* منطقة الزر المركزية البارزة */
+        .center-action-zone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 18px 0 20px;
+            padding: 14px 10px;
+            border-radius: 18px;
+            background: rgba(255, 85, 0, 0.05);
+            border: 1px solid rgba(255, 85, 0, 0.22);
+        }
+
+        .btn {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: linear-gradient(135deg, var(--orange-light), var(--orange-main) 50%, var(--orange-deep));
+            color: var(--text-white);
+            text-decoration: none;
+            padding: 16px 22px;
+            border-radius: 15px;
+            font-size: 17.5px;
+            font-weight: 900;
+            letter-spacing: 0.3px;
+            box-shadow: 0 8px 26px rgba(255, 85, 0, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 160, 110, 0.35);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        }
+
+        .btn svg {
+            width: 21px;
+            height: 21px;
+            fill: #ffffff;
+            flex-shrink: 0;
+        }
+
+        .btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+            transform: skewX(-20deg);
+            animation: shineSweep 3.2s infinite;
+        }
+
+        @keyframes shineSweep {
+            0%, 65% { left: -100%; }
+            100% { left: 160%; }
+        }
+
+        .btn:hover {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 12px 30px rgba(255, 85, 0, 0.62);
+            filter: brightness(1.05);
+        }
+
+        .btn:active {
+            transform: translateY(0) scale(0.99);
+        }
+
+        .action-caption {
+            margin-top: 9px;
+            font-size: 11.5px;
+            color: var(--text-muted);
+        }
+
+        .steps-box {
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 14px;
+            padding: 12px 14px;
+            margin-bottom: 14px;
+            text-align: right;
+            font-size: 13px;
+            color: #dcdcdc;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 0;
+        }
+
+        .step-num {
+            background: rgba(255, 85, 0, 0.22);
+            color: var(--orange-light);
+            font-weight: 800;
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .copy-helper {
+            margin-top: 10px;
+        }
+
+        .copy-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--orange-light);
+            color: var(--text-white);
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-size: 12px;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2163095064608834');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2163095064608834&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <div class="container">
+        <!-- شريط علوي ضمن هوية TEXAS4WIN -->
+        <div class="platform-topbar">
+            <div class="texas-logo">TEXAS<span>4</span>WIN</div>
+            <span class="platform-tag">بوابة رسمية</span>
+        </div>
+
+        <!-- شعار البوت -->
+        <div class="bot-emblem" aria-label="شعار SPECIAL ONE TEXAS BOT">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2L4.5 6.5V11.5C4.5 16.55 7.7 21.25 12 22.5C16.3 21.25 19.5 16.55 19.5 11.5V6.5L12 2ZM10.8 16.2L7.3 12.7L8.7 11.3L10.8 13.4L15.3 8.9L16.7 10.3L10.8 16.2Z"/>
+            </svg>
+        </div>
+
+        <div class="bot-title">SPECIAL ONE <span>TEXAS BOT</span></div>
+
+        <div class="badge"><span class="live-dot"></span>جاهز للدخول الفوري</div>
+        <h1>ابدأ عبر البوت الرسمي الآن</h1>
+        <p>اضغط على الزر في المنتصف للانتقال المباشر إلى تليجرام وبدء الخطوات بدون تأخير.</p>
+
+        <!-- بطاقة وصول سريع -->
+        <div class="quick-access-box">
+            <div class="access-item">
+                <span class="access-title">دخول مباشر</span>
+                <span class="access-sub">تحويل فوري إلى تليجرام</span>
+            </div>
+            <div class="access-item">
+                <span class="access-title">حساب موثوق</span>
+                <span class="access-sub">متابعة سهلة وسريعة</span>
+            </div>
+        </div>
+
+        <!-- زر الدخول المركزي البارز -->
+        <div class="center-action-zone">
+            <a id="botLink"
+               href="https://telegram.me/SpecialOneTexasBot?start=7828300263"
+               class="btn"
+               onclick="return openTelegramBot(event, this.href);">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.03-1.99 1.27-5.62 3.72-.53.36-1.01.54-1.44.53-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.89.03-.25.38-.51 1.05-.78 4.11-1.79 6.85-2.97 8.22-3.54 3.91-1.63 4.72-1.91 5.25-1.92.12 0 .39.03.56.17.14.12.18.28.2.45-.02.07-.02.13-.04.2z"/>
+                </svg>
+                <span>دخول إلى SPECIAL ONE TEXAS BOT</span>
+            </a>
+            <span class="action-caption">يفتح رابط الإحالة الرسمي مباشرة في تليجرام</span>
+        </div>
+
+        <!-- خطوات سريعة -->
+        <div class="steps-box">
+            <div class="step-item"><span class="step-num">1</span><span>اضغط على زر الدخول في المنتصف</span></div>
+            <div class="step-item"><span class="step-num">2</span><span>اضغط «ابدأ / Start» داخل البوت في تليجرام</span></div>
+            <div class="step-item"><span class="step-num">3</span><span>تابع خطواتك مباشرة داخل البوت</span></div>
+        </div>
+
+        <div class="copy-helper">
+            <button type="button" class="copy-btn" onclick="copyBotLink(this)">نسخ رابط البوت المباشر</button>
+        </div>
+
+        <div class="footer-text">
+            تحويل آمن ومباشر إلى تليجرام.<br>
+            جميع الحقوق محفوظة © SPECIAL ONE TEXAS BOT 2026
+        </div>
+    </div>
+
+    <script>
+        function openTelegramBot(event, url) {
+            try {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'CompleteRegistration');
+                }
+            } catch (e) {}
+
+            // توجيه مباشر ومضمون حتى داخل متصفحات التطبيقات
+            if (event) {
+                event.preventDefault();
+            }
+            setTimeout(function () {
+                window.location.href = url;
+            }, 120);
+            return false;
+        }
+
+        function copyBotLink(btn) {
+            const url = document.getElementById('botLink').href;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const oldText = btn.textContent;
+                    btn.textContent = 'تم نسخ الرابط ✓';
+                    setTimeout(() => btn.textContent = oldText, 2000);
+                });
+            }
+        }
+    </script>
